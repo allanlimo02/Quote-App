@@ -1,26 +1,47 @@
 
 <div class="col-md-2"></div>
 <div class="col-md-8">
-    <form>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <!-- Username Input -->
         <div>
             <label id="fmlabel" for="authorName">Username</label>
-            <input type="text" class="form-control"  name="user" id="user" name="user" required>
+            <input type="text" class="form-control"  name="user" id="user" name="user" [(ngModel)]="newQuote.name" #name='ngModel' required>
+            <P>Your Name:  {{newQuote.name}}</P>
+            <!-- Validation -->
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                         <p>Your Name is required</p>
+                </div>
+
         </div>
+
         <!-- Author input -->
         <div>
             <label id="fmlabel" for="authorName">Author</label>
-                <input type="text" class="form-control"  name="author" id="fAuthor" name="author" required>
+                <input type="text" class="form-control"  name="author" id="fAuthor" name="author" [(ngModel)]="newQuote.author" #author='ngModel' required>
+                <P>Your Name:  {{newQuote.author}}</P>
+                <!-- Validation -->
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Author's Name is required</p>
+                </div>
         </div>
         <!-- Quote Input -->
         <div>
             <label id="fmlabel" for="quoteBody">Quote</label>
-                <input type="text" class="form-control" name="quote" id="quote"  required>
+                <input type="text" class="form-control" name="quote" id="quote" [(ngModel)]="newQuote.quote" #quote='ngModel' required>
+                <!-- Validation -->
+                <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                    <p>Author's Quote is required</p>
+                </div>
+
         </div>
         <!-- Date of invention -->
         <div>
             <label for="complete" id="fmlabel">Date of  Creation</label>
-            <input class="form-control" type='date' id="complete" required >
+            <input class="form-control" type='date' id="complete" [(ngModel)]="newQuote.completeDate" #complete='ngModel' required >
+            <!-- Validation -->
+            <div [hidden]="complete.valid || complete.pristine" class="alert alert-danger">
+                <p>Date  is required</p>
+            </div>
         </div>
         <br>
         <button type="submit" class="btn btn-success">Submit Quote</button>

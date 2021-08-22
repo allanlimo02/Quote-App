@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    {index:1 ,name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {index:2,name:'Mercy', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {index:3,name:'Cellan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {index:4,name:'Michelle', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)}
+    new Quote(1 ,'Allan','Chinua Achebe','We will die successfull',new Date(2020,3,19)),
+    new Quote (2,'Mercy', 'Chinua Achebe','We will die successfull',new Date(2020,3,19)),
+    new Quote (3,'Cellan','Chinua Achebe','We will die successfull',new Date(2020,3,19)),
+    new Quote (4,'Michelle','Chinua Achebe','We will die successfull',new Date(2020,3,19))
   ];
 
     // 
@@ -20,6 +20,13 @@ export class QuoteComponent implements OnInit {
       if (isComplete) {
         this.quotes.splice(index,1);
       }
+    }
+    //Adding new goal
+    add(quote){
+      // let quoteLength = this.quotes.length;
+      // quote.id = quoteLength+1;
+      quote.completeDate = new Date(quote.completeDate)
+      this.quotes.push(quote)
     }
   constructor() { }
 
