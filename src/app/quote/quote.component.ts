@@ -9,8 +9,8 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote(1 ,'Allan','Chinua Achebe','We will die successfull',new Date(2020,3,19)),
-    new Quote (2,'Mercy', 'Chinua Achebe','We will die successfull',new Date(2020,3,19)),
+    new Quote(1 ,'“Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking.” ','Steve Jobs','Allan Limo',new Date(2020,3,19)),
+    new Quote (2,'Allan', 'Chinua Achebe','We will die successfull',new Date(2020,3,19)),
     new Quote (3,'Cellan','Chinua Achebe','We will die successfull',new Date(2020,3,19)),
     new Quote (4,'Michelle','Chinua Achebe','We will die successfull',new Date(2020,3,19))
   ];
