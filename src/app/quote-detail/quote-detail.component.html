@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div>
     
-       Addded by: {{quote.name}} <br>
-       Composed  {{quote.completeDate|dateCount}} days ago
+       <p class="added">Addded by: <b style="color: blue; font-weight: 900;">{{quote.name}}</b></p>
+       <p class="composed">Composed  {{quote.completeDate|dateCount}} days ago</p>
     
     <button class="btn btn-danger dbtn" (click)= 'quoteComplete(true)'>Delete<i class="fa fa-trash"></i></button>
     
