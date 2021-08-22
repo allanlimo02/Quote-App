@@ -7,8 +7,6 @@ import { Quote } from './quote';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes:Quote[]=[
-    {name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)}
-  ];
+  
   
 }
