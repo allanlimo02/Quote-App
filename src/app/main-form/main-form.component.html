@@ -1,1 +1,29 @@
-<p>main-form works!</p>
+
+<div class="col-md-2"></div>
+<div class="col-md-8">
+    <form>
+        <!-- Username Input -->
+        <div>
+            <label id="fmlabel" for="authorName">Username</label>
+            <input type="text" class="form-control"  name="user" id="user" name="user" required>
+        </div>
+        <!-- Author input -->
+        <div>
+            <label id="fmlabel" for="authorName">Author</label>
+                <input type="text" class="form-control"  name="author" id="fAuthor" name="author" required>
+        </div>
+        <!-- Quote Input -->
+        <div>
+            <label id="fmlabel" for="quoteBody">Quote</label>
+                <input type="text" class="form-control" name="quote" id="quote"  required>
+        </div>
+        <!-- Date of invention -->
+        <div>
+            <label for="complete" id="fmlabel">Date of  Creation</label>
+            <input class="form-control" type='date' id="complete" required >
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Submit Quote</button>
+    </form>
+</div>
+<div class="col-md-2"></div>
