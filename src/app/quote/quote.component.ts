@@ -9,11 +9,18 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    {name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
-    {name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)}
+    {index:1 ,name:'Allan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
+    {index:2,name:'Mercy', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
+    {index:3,name:'Cellan', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)},
+    {index:4,name:'Michelle', author:'Chinua Achebe',quote:'We will die successfull',completeDate:new Date(2020,3,19)}
   ];
+
+    // 
+    completeQuote(isComplete: boolean, index: number){
+      if (isComplete) {
+        this.quotes.splice(index,1);
+      }
+    }
   constructor() { }
 
   ngOnInit(): void {

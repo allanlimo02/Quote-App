@@ -1,1 +1,9 @@
-<p>quote-detail works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div>
+    <p>
+       Addded by: {{quote.name}} <br>
+       To be completed in {{quote.completeDate|dateCount}} days
+    </p>
+    <button class="btn btn-danger" (click)= 'quoteComplete(true)'><i class="fa fa-trash"></i></button>
+    
+</div>
