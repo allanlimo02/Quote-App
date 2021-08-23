@@ -12,7 +12,9 @@ export class MainFormComponent implements OnInit {
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
+    this.newQuote = new Quote(0,"","","",new Date());
       }
+
   constructor() { }
 
   ngOnInit(): void {

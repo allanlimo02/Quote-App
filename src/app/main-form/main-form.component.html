@@ -2,7 +2,7 @@
 
 <div class="col-md-2"></div>
 <div class="col-md-8">
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote();quoteForm.resetForm({})' #quoteForm='ngForm'>
         <!-- Username Input -->
         <div>
             <label id="fmlabel" for="authorName">Username</label>
