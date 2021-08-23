@@ -19,3 +19,9 @@
 .dislike{
     margin-left: 20px;
 }
+#author{
+    text-align: center;
+}
+#name{
+    font-size: 27px;
+}
