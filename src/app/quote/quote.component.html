@@ -14,7 +14,8 @@
         <app-quote-detail [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail><br>
         <button (click)='likes()' style="font-size:14px" class="btn btn-success"> <i class="fa fa-thumbs-up"></i></button>  
         <button (click)="dislike()" style="font-size:14px" class="btn btn-danger dislike"> <i class="fa fa-thumbs-down"></i></button>
-        <p>Total Votes: {{votes}}</p>
+        <br><br><p *ngIf='votes >0'>This quote  have {{votes}} votes</p>
+        <p ></p>
       </li>
 
     </ul>
