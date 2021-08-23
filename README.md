@@ -1,7 +1,11 @@
 # QuoteB
+### Developed by     Allan K Limo
 
+---------   
 #### This is a platform where users will be promted  to input their favourite quote, then they get to vote for their best quote
 -----
+
+
  ## Description
  This is Angular web application, that helps the users to list their favourite qoutes from ancient / Famous people, then let them vote for what they beleive to be most inpirational and terrible oned.
 
