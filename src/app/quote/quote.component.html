@@ -10,7 +10,7 @@
     <ul>
       <li *ngFor='let quote of quotes;let i = index' class="single-quote">
         <p id="name">"{{quote.quote}}"</p>
-        <p id="author">~{{quote.author}}~</p>
+        <p id="author">By~ {{quote.author}}</p>
         <app-quote-detail [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail><br>
         <button (click)='likes()' style="font-size:14px" class="btn btn-success"> <i class="fa fa-thumbs-up"></i></button>  
         <button (click)="dislike()" style="font-size:14px" class="btn btn-danger dislike"> <i class="fa fa-thumbs-down"></i></button>
